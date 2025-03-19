@@ -1,5 +1,5 @@
 .card {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -9,7 +9,7 @@
 .card__title {
   margin-top: 12px;
   padding: 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
