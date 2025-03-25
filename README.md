@@ -22,7 +22,7 @@ This project focuses on creating a user-friendly interface for social interactio
 
 ## Deployment
 
-Explore the project on the GitHub Pages: []
+Explore the project on GitHub Pages: (https://shinygoo.github.io/se_project_spots/)
 
 ## Preview
 
