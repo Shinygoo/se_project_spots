@@ -28,7 +28,7 @@ Explore the project on GitHub Pages: (https://shinygoo.github.io/se_project_spot
 
 Below a video briefly describing the project.
 
-https://console.cloud.google.com/storage/browser/_details/project_spots/video%20for%20spots%20project%20readme.mp4?invt=AbtMMQ&project=vivid-anthem-455123-a8
+https://drive.google.com/file/d/1ss5YbHsQz7i3mTOtInsxt0O-DJAw9N4c/view?usp=sharing
 
 Below is a demonstration of different screen layouts.
 

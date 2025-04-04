@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   padding: 34px 0 20px;
-  border-bottom: 1px rgba(33, 33, 33, 0.2) solid;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -26,12 +26,14 @@
   margin: 0 0 12px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   font-size: 32px;
   line-height: 1;
   max-width: 420px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
@@ -73,8 +75,9 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  width: 180px;
-  height: 59px;
+  width: 149px;
+  height: 52px;
+  white-space: nowrap;
   margin-top: auto;
   padding: 18px 32px;
   border-radius: 8px;
@@ -93,11 +96,12 @@
   vertical-align: top;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 885px) {
   .profile {
     flex-direction: column;
     padding-top: 20px;
     align-items: center;
+    width: fit-content;
   }
 
   .profile__avatar {
