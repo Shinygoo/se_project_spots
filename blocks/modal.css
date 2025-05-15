@@ -1,5 +1,8 @@
 .modal {
   visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -15,6 +18,8 @@
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .modal__container {
