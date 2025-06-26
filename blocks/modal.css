@@ -170,7 +170,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .modal__close-btn_type_preview {
+  .modal__close-btn {
     top: -48px;
     right: 0;
   }

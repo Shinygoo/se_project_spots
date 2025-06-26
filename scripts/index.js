@@ -144,8 +144,7 @@ newCardForm.addEventListener("submit", function (evt) {
 
   closeModal(newPostModal);
 
-  newCardNameInput.value = "";
-  newCardLinkInput.value = "";
+  newCardForm.reset();
 });
 
 initialCards.forEach(function (item) {
