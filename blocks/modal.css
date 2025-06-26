@@ -142,7 +142,7 @@
 }
 
 .modal__image-container {
-  position: absolute;
+  position: relative;
 }
 
 .modal__image {
@@ -181,6 +181,11 @@
 }
 
 @media screen and (max-width: 629px) {
+  .modal__image {
+    max-width: none;
+    max-height: none;
+  }
+
   .modal__submit-btn {
     max-width: none;
   }
