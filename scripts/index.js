@@ -43,7 +43,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
-const cardSubmitbtn = newPostModal.querySelector(".modal__submit-btn");
+const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newCardForm = newPostModal.querySelector(".modal__form");
 const newCardNameInput = newPostModal.querySelector("#card-caption-input");
 const newCardLinkInput = newPostModal.querySelector("#card-link-input");
@@ -96,29 +96,31 @@ previewModalCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
-function escapeModal() {
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      const modal = document.querySelector(".modal_is-opened");
-      if (modal) {
-        closeModal(modal);
-      }
-    }
-  });
-}
-
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("modal")) {
     closeModal(event.target);
   }
 });
 
+const handleEscapeKey = function (event) {
+  {
+    if (event.key === "Escape") {
+      const modal = document.querySelector(".modal_is-opened");
+      if (modal) {
+        closeModal(modal);
+      }
+    }
+  }
+};
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -165,14 +167,13 @@ newCardForm.addEventListener("submit", function (evt) {
   cardsList.prepend(cardElement);
 
   disableButton(cardSubmitbtn, settings);
-
-  newCardForm.reset();
   closeModal(newPostModal);
+  newCardForm.reset();
+
+  resetValidation(newCardForm, [newCardLinkInput, newCardNameInput], settings);
 });
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
-
-escapeModal();

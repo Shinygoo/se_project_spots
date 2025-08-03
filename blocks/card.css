@@ -39,16 +39,16 @@
 
 .card__like-btn {
   margin-top: 12px;
-  background: transparent url(../images//heart.svg) center/contain no-repeat;
+  background: transparent url(../images/heart.svg) center/contain no-repeat;
   cursor: pointer;
   width: 23px;
   height: 20px;
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .card__like-btn:hover {
-  opacity: 100;
+  opacity: 1;
 }
 
 .card__like-btn_active {
@@ -57,7 +57,7 @@
 }
 
 .card__like-btn_active:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .card__delete-btn {
