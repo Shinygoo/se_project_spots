@@ -103,12 +103,10 @@ document.addEventListener("click", (event) => {
 });
 
 const handleEscapeKey = function (event) {
-  {
-    if (event.key === "Escape") {
-      const modal = document.querySelector(".modal_is-opened");
-      if (modal) {
-        closeModal(modal);
-      }
+  if (event.key === "Escape") {
+    const modal = document.querySelector(".modal_is-opened");
+    if (modal) {
+      closeModal(modal);
     }
   }
 };
@@ -140,6 +138,8 @@ editProfileCloseBtn.addEventListener("click", function () {
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
+  newCardForm.reset();
+  resetValidation(newCardForm, [newCardLinkInput, newCardNameInput], settings);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
@@ -166,7 +166,7 @@ newCardForm.addEventListener("submit", function (evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
-  disableButton(cardSubmitbtn, settings);
+  disableButton(cardSubmitBtn, settings);
   closeModal(newPostModal);
   newCardForm.reset();
 
